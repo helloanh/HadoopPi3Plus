@@ -1,0 +1,16 @@
+auto lo
+iface lo inet loopback
+
+allow-hotplug wlan0
+iface wlan0 inet manual
+ wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+allow-hotplug wlan0
+#iface wlan0 inet dhcp
+iface wlan0 inet static
+ 
+address 192.168.1.43
+netmask 255.255.255.0
+gateway 192.168.0.1
+broadcast 192.168.1.255
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
