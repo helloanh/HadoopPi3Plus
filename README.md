@@ -30,6 +30,15 @@ MyPiSlave1
 MyPiSlave2
 ```
 
+#### Make sure ssh is running else you'll get port 22 connection error:  
+First check openssh-server installed in that system.
+check the status of ssh service, make ssh service start.  
+
+```bash 
+sudo service ssh status    
+sudo service ssh start
+```
+
 4. (In Master node only), create a new file named **master** in $HADOOP_HOME/etc/hadoop/ directory.  Add the master node you name here.  
 ```bash
 MyPiHadoopMaster
