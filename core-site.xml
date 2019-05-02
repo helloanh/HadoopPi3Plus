@@ -1,0 +1,26 @@
+# core-site.xml MyPiHadoopMaster
+
+<configuration>
+  <property>
+    <name>fs.default.name</name>
+    <value>hdfs://MyPiHadoopMaster:9000</value>
+  </property>
+</configuration>
+
+# core-site.xml MyPiSlave1
+
+<configuration>
+  <property>
+    <name>fs.default.name</name>
+    <value>hdfs://MyPiSlave1:9000</value>
+  </property>
+</configuration>
+
+# core-site.xml MyPiSlave2
+
+<configuration>
+  <property>
+    <name>fs.default.name</name>
+    <value>hdfs://MyPiSlave2:9000</value>
+  </property>
+</configuration>
