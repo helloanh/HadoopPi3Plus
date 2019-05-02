@@ -18,12 +18,21 @@ export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
 export JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre 
 ```
 2. run source ~/.bashrc  
-2. make sure ssh is installed and working  
+
+3. set up java_home in haddop_env.sh
+Hadoop environment variables, uncomment/update the two export lines
+```bash
+# /opt/hadoop/etc/hadoop/hadoop-env.sh
+export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+export HADOOP_HEAPSIZE=250
+```
+
+4. make sure ssh is installed and working  
 Make sure that /etc/hosts.allow contains:  
 ssh:ALL:allow
 sshd:ALL:allow
 
-3.  set up slaves in $HADOOP_HOME/etc/hadoop/slaves file
+e  set up slaves in $HADOOP_HOME/etc/hadoop/slaves file
 ```bash
 localhost
 MyPiSlave1
