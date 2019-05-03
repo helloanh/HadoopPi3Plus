@@ -21,8 +21,9 @@
 # set JAVA_HOME in this file, so that it is correctly defined on
 # remote nodes.
 
-# The java implementation to use.
-export JAVA_HOME=${JAVA_HOME}
+# The java implementation to use. This is important.
+# Over ssh, other nodes need the JAVA HOME envir variable else you will run into errors.
+export JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/
 
 # The jsvc implementation to use. Jsvc is required to run secure datanodes
 # that bind to privileged ports to provide authentication of data transfer
